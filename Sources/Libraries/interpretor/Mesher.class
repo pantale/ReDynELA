@@ -1,0 +1,3 @@
+virtual class Mesher;
+method void Mesher::link(Structure*);
+method void Mesher::setElement(Element*);

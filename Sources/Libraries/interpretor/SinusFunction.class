@@ -1,0 +1,9 @@
+virtual class Function;
+class SinusFunction;
+heritance SinusFunction : Function;
+method void SinusFunction::setCos(Real,Real);Cette méthode permet d'ajouter un monôme de la forme $A \cos (\omega x)$ pour la fonction sinusoïdale en spécifiant les valeurs de $A$ pour le premier argument et de $\omega$ pour le second argument.
+method void SinusFunction::setCos(Real,Real,Real);Cette méthode permet d'ajouter un monôme de la forme $A \cos (\omega x + B)$ pour la fonction sinusoïdale en spécifiant les valeurs de $A$ pour le premier argument, de $\omega$ pour le second argument et de $B$ pour le troisième argument.
+method void SinusFunction::setSin(Real,Real);Cette méthode permet d'ajouter un monôme de la forme $A \sin (\omega x)$ pour la fonction sinusoïdale en spécifiant les valeurs de $A$ pour le premier argument et de $\omega$ pour le second argument.
+method void SinusFunction::setSin(Real,Real,Real);Cette méthode permet d'ajouter un monôme de la forme $A \sin (\omega x + B)$ pour la fonction sinusoïdale en spécifiant les valeurs de $A$ pour le premier argument, de $\omega$ pour le second argument et de $B$ pour le troisième argument.
+method void SinusFunction::setConstant(Real);Cette méthode permet d'ajouter une constante à la fonction sinusoïdale.
+method void SinusFunction::toGnuplot(String, Real, Real, Real);

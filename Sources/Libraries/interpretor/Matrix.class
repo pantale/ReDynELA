@@ -1,0 +1,41 @@
+class Matrix;
+method void Matrix::redim (Indice, Indice); Modifie la taille d'une matrice.
+method void Matrix::Identity (); Renvoie une matrice identité.
+method Real Matrix::det (); Calcule le déterminant d'une matrice.
+method Real Matrix::Trace (); Calcule la trace d'une matrice.
+operator Real Matrix::operator()(Indice, Indice); Opérateur permettant d'accéder aux composantes individuelles d'une matrice.
+operator Matrix Matrix::operator =(); Opérateur d'affectation entre matrices
+operator Matrix Matrix::operator +(Matrix); Addition de deux matrices
+operator Matrix Matrix::operator -(Matrix); Soustraction de deux matrices
+operator Matrix Matrix::operator *(Real); Multiplication d'une matrice par un scalaire
+operator Matrix Matrix::operator *(Matrix); Multiplication de deux matrices entre elles
+operator Vector Matrix::operator *(Vector); Multiplication d'une matrice par un vecteur
+method Vector Matrix:: trans_mult(Vector); Multiplication de la transposée d'une matrice par un vecteur
+operator Matrix Matrix::operator /(Real); Division des composantes d'une matrice par un scalaire
+method void Matrix::fill (Real);Remplit une matrice avec une valeur réelle. Toutes les composantes de la matrice sont alors égales entre elles.
+method Boolean Matrix::indexOK (Indice, Indice); Cette méthode teste les bornes d'une matrice et renvoie un Booleen indiquant si l'indice donné en argument est bien dans les bornes de la matrice.
+operator Boolean Matrix::operator==(Matrix) ; Teste l'égalité de deux matrices et renvoie un booléen qui prend la valeur True si les deux matrices sont égales et False dans le cas contraire.
+operator Boolean Matrix::operator!=(Matrix) ; Teste l'inégalité de deux matrices et renvoie un booléen qui prend la valeur False si les deux matrices sont égales et True dans le cas contraire.
+method Real Matrix::moyTrace (); Calcule la valeur moyenne de la trace d'une matrice
+method Matrix Matrix::Transpose (); Renvoie la transposée d'une matrice
+method Vector Matrix::rowSum (); Renvoie un vecteur contenant la somme des élément situés sur les lignes d'une matrice.
+method Vector Matrix::colSum (); Renvoie un vecteur contenant la somme des élément situés sur les colonnes d'une matrice.
+method void Matrix::getSymetricPart (Matrix) ; Renvoie la partie symétrique d'une matrice.
+method void Matrix::getAntiSymetricPart (Matrix) ; Renvoie la partie anti-symétrique d'une matrice.
+method Vector Matrix::getRow (Indice); Remplit un vecteur avec une ligne d'une matrice.
+method Vector Matrix::getCol (Indice); Remplit un vecteur avec une colonne d'une matrice.
+//method Real Matrix::det () ; 
+method Matrix Matrix::inverse (); Calcule l'inverse d'une matrice
+method Matrix Matrix::factLU (); Factorise une matrice en utilisant une décomposition LU.
+method Vector Matrix::forwBackLU (Vector); Calcule les valeurs d'une matrice après une factorisation LU.
+method Matrix Matrix::factLU (Vector,Vector); Factorise une matrice en utilisant une décomposition LU et un pivot des lignes.
+method void Matrix::forwBackLU(Vector, Vector,Vector); Calcule les valeurs d'une matrice après une factorisation LU avec pivot des lignes.
+method Vector Matrix::getSolve (Vector); Résoud le système Ax=b sans modifier le vecteur second membre.
+method void Matrix::solve (Vector); Résoud le système Ax=b en modifiant le vecteur second membre.
+method Matrix Matrix::getPseudoInverse (Boolean, Real); Cette méthode calcule la pseudoInverse d'une matrice $\textbf{A}$. Cette méthode utilise la routine DGESVD de la librairie Lapack.
+method void Matrix::computePseudoInverse (Matrix, Matrix, Boolean, Real); Cette méthode calcule la pseudoInverse et le Null-Space d'une matrice $\textbf{A}$. Cette méthode utilise la routine DGESVD de la librairie Lapack.
+method Matrix Matrix::getNullSpace (); Cette méthode calcule le Null Space d'une matrice $\textbf{A} $. Le null-space de$\textbf{A}=N.S.(\textbf{A})\subset\mathcal{W} $ est l'ensemble des éléments de $\mathcal{V} $ tels que $\textbf{A}(\overrightarrow{v})=\overrightarrow{0} $. Cette méthode utilise la routine DGESVD de la librairie Lapack.
+method void Matrix::computeRightEigenVectors (Vector, Matrix);Cette méthode calcule les valeurs propres et les vecteurs propres à droite d'une matrice $ \textbf{A} $. Cette méthode utilise la routine DGESVD de la librairie Lapack.
+method void Matrix::computeLeftEigenVectors (Vector, Matrix);Cette méthode calcule les valeurs propres et les vecteurs propres à gauche d'une matrice $ \textbf{A} $. Cette méthode utilise la routine DGESVD de la librairie Lapack.
+method void Matrix::computeEigenVectors (Vector, Matrix, Matrix);Cette méthode calcule les valeurs propres et les vecteurs propres à droite et à gauche d'une matrice $ \textbf{A} $. Cette méthode utilise la routine DGESVD de la librairie Lapack.
+method void Matrix::outStdout();

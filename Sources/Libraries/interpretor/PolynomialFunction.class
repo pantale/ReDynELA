@@ -1,0 +1,5 @@
+virtual class Function;
+class PolynomialFunction;
+heritance PolynomialFunction : Function;
+method void PolynomialFunction::set(Indice, Real);
+method void PolynomialFunction::toGnuplot(String, Real, Real, Real);

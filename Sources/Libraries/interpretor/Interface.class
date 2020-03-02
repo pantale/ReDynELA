@@ -1,0 +1,10 @@
+class Interface;
+class Side;
+//virtual class SideFace;
+//class SideFace2D;
+//heritance SideFace2D : SideFace;
+name Interface::name;
+method void Interface::setMaster(Side*); Associe une instance de la classe Side (surface) à la partie Master de l'interface
+method void Interface::setSlave(Side*); Associe une instance de la classe Side (surface) à la partie Slave de l'interface
+method void Side::addNodeSet(NodeSet*); Ajoute un ensemble de noeuds pour définir une surface. Les nouveaux noeuds sont ajoutés à la liste de ceux qui ont déja été associés à la surface.
+method void Interface::setContactLaw(ContactLaw* ); Associe une loi de frottement à une interface de contact.

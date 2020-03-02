@@ -1,0 +1,7 @@
+class HistoryFile;
+name HistoryFile::name;
+method void HistoryFile::append(NodeSet*,String);Ajoute la variable nodale définie par le deuxième paramètre sur l'ensemble des noeuds définis par le premier paramètre au fichier d'historique.
+method void HistoryFile::append(NodeSet*,String,Indice);Ajoute la variable nodale définie par le deuxième paramètre, avec la composante définie par le troisième paramètre sur l'ensemble des noeuds définis par le premier paramètre au fichier d'historique.
+method void HistoryFile::setName(String);Spécifie le nom du fichier de sauvegarde à utiliser.
+method void HistoryFile::setSaveTime(Real);Définit la période entre deux sauvegardes successives.
+method void HistoryFile::setSaveTime(Real,Real,Real);Définit la date de début (1er paramètre), la date de fin (2ème paramètre) et la période entre deux sauvegardes successives (3ème paramètre).

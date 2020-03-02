@@ -1,0 +1,4 @@
+class Solver;
+class ExplicitSolverCH;
+heritance ExplicitSolverCH : Solver;
+method void ExplicitSolverCH::setDissipation(Real);Permet de définir l'amortissement du schéma explicite au travers du rayon spectral $\rho_b$

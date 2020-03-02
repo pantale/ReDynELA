@@ -1,0 +1,5 @@
+virtual class Function;
+class RampFunction;
+heritance RampFunction : Function;
+method void RampFunction::set(String,Real,Real);Methode permettant de définir la fonction que l'on désire créer en spécifiant le type de fonction par l'intermédiaire de l'argument 1 sous forme d'une chaine de caractères, et la plage de définition $[x_1,x_2]$ par l'intermédiaire des arguments 2 et 3 respectivement.
+method void RampFunction::toGnuplot(String);Cette méthode permet de sortir un tracé de la fonction sur un fichier compatible avec le format gnuplot dont le nom est spécifié au travers de l'argument de la méthode. Le fichier de sortie comporte 250 points.

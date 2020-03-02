@@ -1,0 +1,3 @@
+class BoundaryFlux;
+method Real BoundaryFlux::get(); Cette méthode permet de récupérer le flux imposé sous forme d'un réel.
+method void BoundaryFlux::set(Real);Cette méthode permet de spécifier le flux associé à la condition limite sous la forme d'un réel.

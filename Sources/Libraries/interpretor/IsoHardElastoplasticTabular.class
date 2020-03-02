@@ -1,0 +1,3 @@
+class IsoHardElastoplasticTabular;
+method void IsoHardElastoplasticTabular::setFunction (DiscreteFunction*); Cette méthode permet de rattacher une fonction discrète définissant l'évolution d'un écrouissage de la forme $ \varepsilon=f(\sigma) $ à un matériau élasto-plastique tabulé.
+method DiscreteFunction* IsoHardElastoplasticTabular::getFunction (); Cette méthode renvoie la fonction discrète associée à un matériau élasto-plastique tabulé.

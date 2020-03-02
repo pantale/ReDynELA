@@ -1,0 +1,12 @@
+class Material;
+name Material::name;
+method void Material::setColor(Vec3D);Méthode permettant de définir la couleur affectée pour le postProcesseur graphique à un matériau donné en spécifiant dans une Vec3D ses 3 composantes rouge, vert et bleu comprises entre 0 et 1.
+method void Material::setColor(Real,Real,Real);Méthode permettant de définir la couleur affectée pour le postProcesseur graphique à un matériau donné en spécifiant ses 3 composantes rouge, vert et bleu séparement sous forme de 3 valeurs réelles comprises entre 0 et 1.
+method void Material::setConductivity(Real);Méthode permettant de définir la conductivité thermique du matériau $W/m^{\circ }K$
+method void Material::setDensity(Real);Méthode permettant de définir la densité de référence du matériau en $kg/m^{3}$ (ce paramètre est obligatoire pour tout matériau)
+method void Material::setDilatation(Real);Méthode permettant de définir le coefficient de dilatation du matériau $m/^{\circ }K$
+method void Material::setHeatCoefficient(Real);Méthode permettant de définir la capacité calorifique du matériau $J/kg^{\circ }K$
+method void Material::setInitTemperature(Real);Méthode permettant de définir la température initiale du matériau en $^{\circ }K$
+method void Material::setPoisson(Real);Méthode permettant de définir le coefficient de Poisson du matériau (ce paramètre est obligatoire pour tout matériau)
+method void Material::setYoung(Real);Méthode permettant de définir le module de Young (en $Pa$) du matériau (ce paramètre est obligatoire pour tout matériau)
+method void Material::setHardening(IsotropicHardening*);Cette méthode est utilisée pour lier un écrouissage isotrope au comportement du matériau. \\On déclare alors au préalable une instance d'une des classes dérivées de la classe virtuelle IsotropicHardening que l'on lie au comportement du matériau via cette méthode.

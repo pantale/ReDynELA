@@ -1,0 +1,3 @@
+virtual class Boundary;
+desactivated method Function* Boundary::getFunction(); Cette méthode permet de récupérer un pointeur sur la fonction associée à une condition limite variable dans le temps.
+method void Boundary::setFunction(Function*); Cette méthode permet de lier une fonction à une condition limite. On modifie ainsi la condition limite correspondante, et on permet alors une variation de la condition limite au cours du temps. L'axe des abscisses de la fonction correspond au temps dans la simulation numérique, et l'axe des ordonnées à un facteur multiplicateur pour la condition limite.

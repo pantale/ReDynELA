@@ -1,0 +1,3 @@
+class BoundaryCondition;
+method void BoundaryCondition::addConstant (Boundary*);Cette méthode affecte une condition limite au cours d'un calcul à un noeud.
+method void BoundaryCondition::addInitial (Boundary*);Cette méthode affecte une condition limite initiale à un noeud.

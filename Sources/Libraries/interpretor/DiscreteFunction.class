@@ -1,0 +1,39 @@
+class DiscreteFunction;
+virtual class Function;
+heritance DiscreteFunction : Function;
+method DiscreteFunction* DiscreteFunction::CentralDifferenceDerivate();Renvoie la fonction dérivée de type Différence Centrée de la fonction discrète donnée en argument.
+method DiscreteFunction* DiscreteFunction::EulerBackwardDerivate();Renvoie la fonction dérivée de type Euler Backward de la fonction discrète donnée en argument.
+method DiscreteFunction* DiscreteFunction::EulerForwardDerivate();Renvoie la fonction dérivée de type Euler Forward de la fonction discrète donnée en argument.
+method DiscreteFunction* DiscreteFunction::ZeroForcing1Derivate();Renvoie la fonction dérivée de type Zero Forcing 1 de la fonction discrète donnée en argument.
+method DiscreteFunction* DiscreteFunction::ZeroForcing2Derivate();Renvoie la fonction dérivée de type Zero Forcing 2 de la fonction discrète donnée en argument.
+method DiscreteFunction* DiscreteFunction::absoluteValueCurve();Renvoie la fonction définie par la valeur absolue de la fonction discrète donnée en argument.
+method void DiscreteFunction::add(Real,Real);Ajout d'un nouveau couple de points à une fonction discrète.
+method DiscreteFunction* DiscreteFunction::addCurves(DiscreteFunction*,Indice);Renvoie la fonction définie par la somme des deux fonctions discrètes données en argument.
+method void DiscreteFunction::autoSort(Boolean);Permet de spécifier que la fonction discrète doit automatiquement ou non trier les points en fonction de leur abscisse.
+method Real DiscreteFunction::average();Méthode renvoyant la valeur moyenne d'une fonction discrète.
+method DiscreteFunction* DiscreteFunction::derivate();Renvoie la fonction dérivée de la fonction discrète donnée en argument.
+method DiscreteFunction* DiscreteFunction::divideCurves(DiscreteFunction*,Indice);Renvoie la fonction définie par la division des deux fonctions discrètes données en argument.
+method DiscreteFunction* DiscreteFunction::errorCurves(DiscreteFunction*,Indice);Renvoie la fonction définie par l'érreur relative des deux fonctions discrètes données en argument.
+method void DiscreteFunction::flush();Vide totalement la liste des points qui constituent la fonction discrète.
+method void DiscreteFunction::fromFile(String,Indice,Indice);Lit une fonction discrète à partir d'un fichier ASCII.
+method Real DiscreteFunction::getInverseValue(Real);Calcul de l'abscisse d'un point quelconque en fonction de l'ordonnée.
+method Indice DiscreteFunction::getNumberOfPoints();Nombre de couples de points définissant la fonction discrète.
+method Real DiscreteFunction::getXPoint(Indice);Renvoie l'abscisse du ième point définissant la fonction discrète.
+method Real DiscreteFunction::getYPoint(Indice);Renvoie l'ordonnée du ième point définissant la fonction discrète.
+method DiscreteFunction* DiscreteFunction::integrate();Renvoie la fonction intégrale de la fonction discrète donnée en argument.
+method Boolean DiscreteFunction::intoBoundsX(Real);Vérifie que le point donné en abscisse est bien dans la limite de définition de la fonction discrète. La fonction discrète n'est pas prévue pour extrapoler les points à gauche ou à droite du domaine de définition.
+method DiscreteFunction* DiscreteFunction::lowPass_1(Real,Indice,Indice);Renvoie la fonction définie par une filtre passe bas de premier ordre sur la fonction discrète donnée en argument.
+method DiscreteFunction* DiscreteFunction::lowPass_2(Real,Real,Indice,Indice);Renvoie la fonction par une filtre passe bas de deuxième ordre sur la fonction discrète donnée en argument.
+method Real DiscreteFunction::maxX();Méthode renvoyant la valeur maximale sur l'axe des abscisses de la fonction discrète.
+method Real DiscreteFunction::maxY();Méthode renvoyant la valeur maximale sur l'axe des ordonnées de la fonction discrète.
+method Real DiscreteFunction::minX();Méthode renvoyant la valeur minimale sur l'axe des abscisses de la fonction discrète.
+method Real DiscreteFunction::minY();Méthode renvoyant la valeur minimale sur l'axe des ordonnées de la fonction discrète.
+method DiscreteFunction* DiscreteFunction::movingAverage(Indice,Indice);Renvoie la fonction définit par la moyenne mobile de la fonction discrète donnée en argument.
+method DiscreteFunction* DiscreteFunction::multiplyCurves(DiscreteFunction*,Indice);Renvoie la fonction définie par la produit des deux fonctions discrètes données en argument.
+method DiscreteFunction* DiscreteFunction::offsetCurve(Real);Renvoie la fonction discrète donnée en argument assortie d'un offset sur l'axe Y d'une valeur donnée.
+method DiscreteFunction* DiscreteFunction::scaleCurve(Real);Renvoie la fonction discrète donnée en argument multipliée par un scalaire.
+method Indice DiscreteFunction::size();Nombre de couples de points définissant la fonction discrète.
+method DiscreteFunction* DiscreteFunction::substractCurves(DiscreteFunction*,Indice);Renvoie la fonction définie par la différence des deux fonctions discrètes données en argument.
+method void DiscreteFunction::toGnuplot(String);Sauvegarde la contenue de la fonction discrète dans un fichier au format Gnuplot.
+method DiscreteFunction* DiscreteFunction::xyMerge(DiscreteFunction*,Indice);Renvoie la fonction combinée des deux fonctions discrètes données en argument.
+operator DiscreteFunction DiscreteFunction::operator = ();Opérateur d'affectation entre DiscreteFunction

@@ -1,0 +1,4 @@
+class BoundarySpeed;
+method Vec3D BoundarySpeed::get(); Cette méthode permet de récupérer le vecteur vitesse imposée sous forme d'un Vec3D.
+method void BoundarySpeed::set(Vec3D); Cette méthode permet de spécifier le vecteur de vitesse associé à la condition limite sous la forme d'un Vec3D.
+method void BoundarySpeed::set(Real,Real,Real);Cette méthode permet de spécifier le vecteur de vitesse associé à la condition limite sous la forme d'un triplet de réels.

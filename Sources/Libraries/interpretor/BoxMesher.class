@@ -1,0 +1,4 @@
+virtual class Mesher;
+class BoxMesher;
+heritance BoxMesher : Mesher;
+method void BoxMesher::rectangle(Real, Real, Indice, Indice);

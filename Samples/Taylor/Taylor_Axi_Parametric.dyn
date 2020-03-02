@@ -1,0 +1,127 @@
+/*
+ * Impact de taylor avec maillage en boucle
+ */
+
+// inclusion des paramètres matériaux
+Real A=400e6;
+Real B=100e6;
+Real n=1;
+Real young=117e9;
+Real poisson= .35;
+Real density= 8930.0;
+
+/*
+ * Caractéristiques du maillage
+ */
+Real nbreSauvegardes=20;
+Real stopTime=80.0e-6;
+Real largeur=3.2e-3;           // largeur
+Real hauteur=32.4e-3;          // hauteur
+Real nbElementsLargeur=25;      // nb elements largeur
+Real nbElementsHauteur=250;     // nb elements hauteur
+Real speed=227;
+
+/*
+ * Calculs préliminaires
+ */
+Real dxLargeur=largeur/(nbElementsLargeur);
+Real dxHauteur=hauteur/(nbElementsHauteur);
+
+// Création d'une structure
+Structure struct;
+
+// Création d'un objet de selection
+Select select;
+
+// creation d'un nodeSet
+NodeSet cylinderNds;
+
+/*
+ * Création des noeuds
+ */
+Real nbNodes=1;
+Real i;
+Real j;
+for (j=0;j<=nbElementsHauteur;j+=1) 
+  for (i=0;i<=nbElementsLargeur;i+=1) {
+    struct.createNode(nbNodes,i*dxLargeur,j*dxHauteur,0);
+    cylinderNds.add(nbNodes);
+    nbNodes++;
+};
+nbNodes--;
+
+/*
+ * Création des éléments
+ */
+ElQua4nAx pel;
+struct.setDefaultElement(pel);
+Real nbElements=1;
+Real x1;
+Real x2;
+Real x3;
+Real x4;
+ElementSet cylinderEls;
+for (j=0;j<nbElementsHauteur;j++) 
+  for (i=0;i<nbElementsLargeur;i++) {
+    x1=(i+(j*(nbElementsLargeur+1))+1);
+    x2=(i+(j*(nbElementsLargeur+1))+2);
+    x3=(i+((j+1)*(nbElementsLargeur+1))+2);
+    x4=(i+((j+1)*(nbElementsLargeur+1))+1);
+    struct.createElement(nbElements,x1,x2,x3,x4);
+    cylinderEls.add(nbElements);
+    nbElements++;
+};
+nbElements--;
+
+// création et ajout du matériau à la structure
+Material materiau;
+
+IsoHardElastoplastic hard;
+hard.setYieldStress(A);
+hard.setHardParameter(B);
+hard.setHardExponent(n);
+
+struct.addMaterial(materiau);
+
+// paramètres standard matériau
+materiau.setYoung(young);
+materiau.setPoisson(poisson);
+materiau.setDensity(density);
+materiau.setColor(1,0,1);
+materiau.setHardening(hard);
+
+// Création des groupes de noeuds pour CL
+NodeSet base;
+base.add(1,nbElementsLargeur+1);
+NodeSet top;
+top.add(nbNodes-nbElementsLargeur,nbNodes);
+NodeSet axis;
+axis.add(1,nbNodes,nbElementsLargeur+1);
+
+// affectation des matériaux aux éléments
+struct.attachMaterialToElements(materiau,cylinderEls);
+
+// conditions aux limites en vitesse initiale
+BoundarySpeed iniSpeed;
+iniSpeed.set(0, -speed, 0);
+struct.attachInitialBC(iniSpeed,cylinderNds);
+
+// conditions aux limites déplacement sur la base
+BoundaryRestrain baseDisp;
+baseDisp.set(0, 1, 0);
+struct.attachConstantBC(baseDisp,base);
+
+// conditions aux limites déplacement sur l'axe
+BoundaryRestrain axisDisp;
+axisDisp.set(1, 0, 1);
+struct.attachConstantBC(axisDisp,axis);
+
+// le solveur
+ExplicitSolverCH solver;
+solver.setTimes(0,stopTime);
+struct.setSaveTimes(0,stopTime,stopTime/nbreSauvegardes);
+//struct.setSaveTimes(0,stopTime,stopTime);
+struct.addSolver(solver);
+solver.setTimeStepMethod("Courant");
+
+END PREPROCESSOR;

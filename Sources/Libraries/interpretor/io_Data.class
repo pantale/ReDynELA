@@ -1,0 +1,3 @@
+virtual class io_Structure;
+class io_Data;
+heritance io_Data : io_Structure;

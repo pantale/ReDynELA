@@ -1,0 +1,20 @@
+class Vec3D; 
+//method Boolean Vec3D::indexOK (Indice); Cette méthode teste les bornes d'un vecteur et renvoie un Booleen indiquant si l'indice donné en argument est bien dans les bornes du vecteur.
+method Indice Vec3D::size (); Renvoie la taille d'un vecteur de type Vec3D. Cette méthode est ici pour compatibilité car elle renvoie bien sur toujours 3.
+method void Vec3D::fill (Real); Remplit un vecteur de type Vec3D avec une valeur réelle. Toutes les composantes du vecteur sont alors égales entre elles.
+method Real Vec3D::distance (Vec3D); Calcule la distance Euclidienne séparant deux points de l'espace définits par deux coordonnées sous forme de Vec3D.
+method Real Vec3D::distance2 (Vec3D); Calcule le carré de la distance Euclidienne séparant deux points de l'espace définits par deux coordonnées sous forme de Vec3D.
+method Real Vec3D::dot (Vec3D); Calcule le produit scalaire de deux vecteurs de type Vec3D.
+method Vec3D Vec3D::vectorial (Vec3D); Calcule le produit vectoriel de deux vecteurs de type Vec3D.
+method Real Vec3D::norm (); Renvoie la norme Euclidienne d'un vecteur de type Vec3D.
+method Real Vec3D::norm2 (); Renvoie le carré de la norme Euclidienne d'un vecteur de type Vec3D.
+method void Vec3D::normalize (); Modifie le vecteur donné en argument de manière à ce que sa norme soit égale à 1.
+operator Real Vec3D::operator  ()  (Indice); Opérateur permettant d'accéder aux composantes individuelles d'un vecteur 3D.
+operator Vec3D Vec3D::operator =  (); Opérateur d'affectation entre vecteurs de type Vec3D.
+operator Vec3D Vec3D::operator +  (Vec3D); Addition de deux vecteurs de type Vec3D
+operator Vec3D Vec3D::operator -  (Vec3D); Soustraction de deux vecteurs de type Vec3D
+//operator Vec3D Vec3D::operator *  (Real); Multiplication d'un vecteur de type Vec3D par un réel.
+operator Vec3D Real::operator *  (Vec3D); Multiplication d'un vecteur de type Vec3D par un réel.
+operator Vec3D Vec3D::operator /  (Real); Division d'un vecteur de type Vec3D par un réel.
+operator Boolean Vec3D::operator ==  (Vec3D); Teste l'égalité de deux vecteurs de type Vec3D et renvoie un booléen qui prend la valeur True si les deux vecteurs sont égaux et False dans le cas contraire.
+operator Boolean Vec3D::operator!=  (Vec3D); Teste l'inégalité de deux vecteurs de type Vec3D et renvoie un booléen qui prend la valeur False si les deux vecteurs sont égaux et True dans le cas contraire.

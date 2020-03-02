@@ -1,0 +1,4 @@
+class Tensor3; 
+method void Tensor3::fill (Real); Remplit un tenseur du troisième ordre avec une valeur réelle. Toutes les composantes du tenseur du troisième ordre sont alors égales entre elles.
+method void Tensor3::Identity (); Renvoie un tenseur d'ordre 3 identité.
+operator Real Tensor3::operator  ()  (Indice, Indice, Indice); Accède aux composantes individuelles d'un tenseur d'ordre 3.

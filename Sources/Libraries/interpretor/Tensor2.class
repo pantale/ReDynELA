@@ -1,0 +1,35 @@
+class Tensor2; 
+method void Tensor2::fill (Real); Remplit un tenseur du second ordre avec une valeur réelle. Toutes les composantes du tenseur du second ordre sont alors égales entre elles.
+method void Tensor2::Identity (); Renvoie un tenseur d'ordre 2 identité.
+method Real Tensor2::prod2 (Tensor2); Double produit contracté de deux tenseur d'ordre 2.
+method Tensor2 Tensor2::extProd (Vec3D, Vec3D); Produit externe de deux vecteurs de type Vec3D.
+method Tensor2 Tensor2::prod1 (Tensor2); Simple produit contracté de deux tenseur d'ordre 2.
+//method Real Tensor2::prod2 (Tensor2); 
+method Real Tensor2::norme (); Calcule la norme d'un tenseur d'ordre 2.
+method Tensor2 Tensor2::deviator (); Calcule la partie déviatorique d'un tenseur d'ordre 2.
+//method Tensor2 Tensor2::polarDecomposeU (); Effectue la décomposition polaire d'un tenseur d'ordre 2 et renvoie la partie U.
+method void Tensor2::polarDecompose (Tensor2, Tensor2); Effectue la décomposition polaire d'un tenseur d'ordre 2.
+//method Tensor2 Tensor2::polarDecomposeLnU (); Effectue la décomposition polaire d'un tenseur d'ordre 2 et renvoie la partie ln U.
+method void Tensor2::polarDecomposeLnU (Tensor2, Tensor2); Effectue la décomposition polaire d'un tenseur d'ordre 2 et renvoie la partie ln U.
+//method Tensor2 Tensor2::ln (); Calcule le logarithme népérien d'un tenseur d'ordre 2.
+method Real Tensor2::Trace (); Calcule la trace d'un tenseur d'ordre 2.
+method Real Tensor2::moyTrace (); Calcule la valeur moyenne de la trace d'un tenseur d'ordre 2.
+method Tensor2 Tensor2::Transpose (); Renvoie la transposée d'un tenseur d'ordre 2.
+method Vec3D Tensor2::colSum (); Renvoie un vecteur contenant la somme des élément situés sur les lignes d'un tenseur d'ordre 2.
+method Vec3D Tensor2::rowSum (); Renvoie un vecteur contenant la somme des élément situés sur les colonnes d'un tenseur d'ordre 2.
+method void Tensor2::getSymetricPart (Tensor2); Renvoie la partie symétrique d'un tenseur d'ordre 2.
+method void Tensor2::getAntiSymetricPart (Tensor2);  Renvoie la partie anti-symétrique d'un tenseur d'ordre 2.
+method Vec3D Tensor2::getRow (Indice); Remplit un vecteur avec une ligne d'un tenseur d'ordre 2.
+method Vec3D Tensor2::getCol (Indice); Remplit un vecteur avec une colonne d'un tenseur d'ordre 2.
+method Real Tensor2::det (); Calcule le déterminant d'un tenseur d'ordre 2.
+method Tensor2 Tensor2::inverse (); Calcule l'inverse d'un tenseur d'ordre 2.
+method Real Tensor2::misesEquivalent (); Calcule la quantité équivalente à un tenseur d'ordre 2 au sens de von Mises.
+method Real Tensor2::equivalent (); Calcule la quantité équivalente à un tenseur d'ordre 2.
+operator Real Tensor2::operator  ()  (Indice, Indice); Accède aux composantes individuelles d'un tenseur d'ordre 2.
+operator Tensor2 Tensor2::operator +  (Tensor2); Effectue une opération d'addition entre deux tenseurs d'ordre 2.
+operator Tensor2 Tensor2::operator -  (Tensor2); Effectue une opération de soustraction entre deux tenseurs d'ordre 2.
+operator Tensor2 Tensor2::operator *  (Tensor2); Effectue une opération de multiplication entre deux tenseurs d'ordre 2. C'est un simple produit contracté.
+operator Tensor2 Tensor2::operator *  (Real); Multiplie un tenseur d'ordre 2 par un scalaire.
+operator Tensor2 Tensor2::operator /  (Real); Divise un tenseur d'ordre 2 par un scalaire.
+operator Tensor2 Tensor2::operator =  (); Opérateur d'affectation pour un tenseur d'ordre 2.
+operator Vec3D Tensor2::operator *  (Vec3D); Multiplie un tenseur d'ordre 2 par un vecteur.

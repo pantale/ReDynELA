@@ -1,0 +1,9 @@
+class ElementSet;
+name ElementSet::name;
+method void ElementSet::add(Indice);Cette méthode ajoute un élément existant à un ElementSet. L'élément est spécifié par son numéro d'identification. Il est alors recherché dans la grille courante du domaine courant de la structure.
+method void ElementSet::add(Indice,Indice);Cette méthode ajoute un ensemble d'éléments existant à un ElementSet. Les éléments sont spécifiés par leurs numéros d'identification donné dans un intervalle de variation (numéro de début et numéro de fin). Les éléments sont alors recherchés dans la grille courante du domaine courant de la structure.
+method void ElementSet::add(Indice,Indice,Indice);Cette méthode ajoute un ensemble d'éléments existant à un ElementSet. Les éléments sont spécifiés par leurs numéros d'identification donné dans un intervalle de variation (numéro de début, numéro de fin et incrément). Les éléments sont alors recherchés dans la grille courante du domaine courant de la structure.
+method void ElementSet::add(ElementSet*);Cette méthode ajoute un ElementSet existant à un ElementSet.
+method void ElementSet::substract(ElementSet*);Cette méthode modifie l'ElementSet courant en supprimant les noeuds qui sont communs avec ceux de l'ElementSet donné en argument de la méthode.
+method void ElementSet::intersect(ElementSet*);Cette méthode modifie le l'ElementSet courant en ne conservant que les noeuds qui sont communs avec ceux de l'ElementSet donné en argument de la méthode.
+method void ElementSet::clear();Cette méthode supprime tous les éléments de la liste.

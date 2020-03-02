@@ -1,0 +1,11 @@
+FILE(GLOB SRCS *.h *.C)
+
+ADD_LIBRARY(dnlLA ${SRCS})
+
+INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR})
+
+# Include of previous directories
+INCLUDE_DIRECTORIES(${SOURCE_LIBRARY_DIRECTORY}/basicTools ${SOURCE_LIBRARY_DIRECTORY}/lapack)
+
+SOURCE_GROUP(base             REGULAR_EXPRESSION ".*\\.(C|i|h)")
+SOURCE_GROUP(generated        REGULAR_EXPRESSION ".*\\.(cxx|py)")

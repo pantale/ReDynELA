@@ -1,0 +1,4 @@
+class IsoHardElastoplastic;
+method void IsoHardElastoplastic::setHardExponent(Real);Méthode permettant de spécifier la valeur du paramètre $M_Y$ dans la forme de loi $\sigma^v=\sigma^v_0+K_Y\overline{\Eps ^{p}}^{\frac{1}{M_Y}}$ pour un matériau.
+method void IsoHardElastoplastic::setHardParameter(Real);Méthode permettant de spécifier la valeur du paramètre $K_Y$ dans la forme de loi $\sigma^v=\sigma^v_0+K_Y\overline{\Eps ^{p}}^{\frac{1}{M_Y}}$ pour un matériau.
+method void IsoHardElastoplastic::setYieldStress(Real);Méthode permettant de spécifier la valeur du paramètre $\sigma^v_0$ dans la forme de loi $\sigma^v=\sigma^v_0+K_Y\overline{\Eps ^{p}}^{\frac{1}{M_Y}}$ pour un matériau.

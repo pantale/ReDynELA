@@ -1,0 +1,4 @@
+class Tensor4; 
+method void Tensor4::fill (Real); Remplit un tenseur du quatrième ordre avec une valeur réelle. Toutes les composantes du tenseur du quatrième ordre sont alors égales entre elles.
+method void Tensor4::Identity (); Renvoie un tenseur d'ordre 4 identité.
+operator Real Tensor4::operator  ()  (Indice, Indice, Indice, Indice); Accède aux composantes individuelles d'un tenseur d'ordre 4.

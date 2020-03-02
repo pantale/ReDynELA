@@ -1,0 +1,12 @@
+class NodeSet;
+name NodeSet::name;
+method void NodeSet::add(Indice);Cette méthode ajoute un noeud existant à un NodeSet. Le noeud est spécifié par son numéro d'identification. Il est alors recherché dans la grille courante du domaine courant de la structure.
+method void NodeSet::add(Indice,Indice);Cette méthode ajoute un ensemble de noeuds existant à un NodeSet. Les noeuds sont spécifiés par leurs numéros d'identification donné dans un intervalle de variation (numéro de début et numéro de fin). Les noeuds sont alors recherchés dans la grille courante du domaine courant de la structure.
+method void NodeSet::add(Indice,Indice,Indice);Cette méthode ajoute un ensemble de noeuds existant à un NodeSet. Les noeuds sont spécifiés par leurs numéros d'identification donné dans un intervalle de variation (numéro de début, numéro de fin et incrément). Les noeuds sont alors recherchés dans la grille courante du domaine courant de la structure.
+method void NodeSet::add(NodeSet*);Cette méthode ajoute un NodeSet existant à un NodeSet.
+method void NodeSet::substract(NodeSet*);Cette méthode modifie le NodeSet courant en supprimant les noeuds qui sont communs avec ceux du NodeSet donné en argument de la méthode.
+method void NodeSet::surface(ElementSet*);Cette méthode modifie le NodeSet courant et crée un NodeSet contenant les noeuds qui sont à la surface d'un ensemble d'éléments donné en argument de la méthode.
+method void NodeSet::clear();Cette méthode supprime tous les noeuds de la liste.
+method Indice NodeSet::getNodeNumber(Indice);Cette méthode renvoie le numéro réel d'un noeud du NodeSet.
+method Indice NodeSet::size();Cette méthode renvoie le nombre de noeuds contenus dans le NodeSet.
+method void NodeSet::intersect(NodeSet*);Cette méthode modifie le NodeSet courant en ne conservant que les noeuds qui sont communs avec ceux du NodeSet donné en argument de la méthode.

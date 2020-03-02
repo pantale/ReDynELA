@@ -1,0 +1,9 @@
+class DiscreteFunctionSet;
+method void DiscreteFunctionSet::read(String);
+method void DiscreteFunctionSet::write(String);
+method DiscreteFunction* DiscreteFunctionSet::get(String);
+method DiscreteFunction* DiscreteFunctionSet::get(Indice);
+method void DiscreteFunctionSet::add(DiscreteFunction*);
+method void DiscreteFunctionSet::del(Indice);
+method void DiscreteFunctionSet::del(String);
+method Indice DiscreteFunctionSet::size();

@@ -1,0 +1,3 @@
+virtual class IsotropicHardening; 
+name IsotropicHardening::name;
+method void IsotropicHardening::plotToFile (String); Méthode qui permet de sortir un fichier au format gnuplot permettant de visualiser la loi d'écrouissage $\sigma^v = f(\overline{\varepsilon}^{vp})$ sous forme d'une courbe.

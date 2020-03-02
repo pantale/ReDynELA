@@ -1,0 +1,5 @@
+ADD_SUBDIRECTORY(basicTools)
+ADD_SUBDIRECTORY(lapack)
+ADD_SUBDIRECTORY(linearAlgebra)
+ADD_SUBDIRECTORY(finiteElement)
+ADD_SUBDIRECTORY(interpretor)

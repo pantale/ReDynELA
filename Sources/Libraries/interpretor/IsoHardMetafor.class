@@ -1,0 +1,2 @@
+class IsoHardMetafor;
+method void IsoHardMetafor::setParameter(Indice,Real);Méthode permettant de spécifier la valeur du paramètre $P_i$ dans la forme de loi $\sigma^{v}=(P_{2}-P_{1})\left(1-\exp\left(-P_{3}\overline{\varepsilon}^{vp}\right)\right)+P_{4}\left(\overline{\varepsilon}^{vp}\right)^{P_{5}}+P_{1}\left(1+P_{6}\overline{\varepsilon}^{vp}\right)^{P_{7}}+P_{8}\overline{\varepsilon}^{vp}$ pour un matériau.

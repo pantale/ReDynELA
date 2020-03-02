@@ -1,0 +1,25 @@
+class Vector; 
+method void Vector::redim (Indice); Redimensionne un vecteur à une taille donnée en argument
+operator Real Vector::operator  ()  (Indice); Opérateur permettant d'accéder aux composantes individuelles d'un vecteur.
+method Boolean Vector::indexOK (Indice); Cette méthode teste les bornes d'un vecteur et renvoie un Booleen indiquant si l'indice donné en argument est bien dans les bornes du vecteur.
+method Indice Vector::size (); Renvoie la taille d'un vecteur.
+method void Vector::fill (Real); Remplit un vecteur avec une valeur réelle. Toutes les composantes du vecteur sont alors égales entre elles.
+operator Vector Vector::operator =  (); Opérateur d'affectation entre vecteurs.
+operator Boolean Vector::operator ==  (Vector); Teste l'égalité de deux vecteurs et renvoie un booléen qui prend la valeur True si les deux vecteurs sont égaux et False dans le cas contraire.
+operator Boolean Vector::operator !=  (Vector); Teste l'inégalité de deux vecteurs et renvoie un booléen qui prend la valeur False si les deux vecteurs sont égaux et True dans le cas contraire.
+operator Vector Vector::operator +=  (Vector); Addition de deux vecteurs et affectation simultanée.
+operator Vector Vector::operator -=  (Vector); Soustraction de deux vecteurs et affectation simultanée.
+operator Vector Vector::operator *=  (Real); Multiplication d'un vecteur par un réel et affectation simultanée.
+operator Vector Vector::operator /=  (Real); Division d'un vecteur par un réel et affectation simultanée.
+operator Vector Vector::operator +  (Vector);  Addition de deux vecteurs.
+operator Vector Vector::operator -  (Vector); Soustraction de deux vecteurs.
+operator Vector Vector::operator *  (Real); Multiplication d'un vecteur par un réel.
+operator Vector Vector::operator /  (Real); Division d'un vecteur par un réel.
+operator Vector Real::operator *  (Vector); Multiplication d'un vecteur par un réel.
+method Real Vector::distance (Vector) ; Calcule la distance Euclidienne séparant deux points de l'espace définits par deux coordonnées sous forme de vecteur.
+method Real Vector::distance2 (Vector) ; Calcule le carré de la distance Euclidienne séparant deux points de l'espace définits par deux coordonnées sous forme de vecteur.
+method Real Vector::dot (Vector) ; Calcule le produit scalaire de deux vecteurs.
+method Vector Vector::vectorial (Vector) ; Calcule le produit vectoriel de deux vecteurs.
+method Real Vector::norm (); Renvoie la norme Euclidienne d'un vecteur.
+method Real Vector::norm2 (); Renvoie le carré de la norme Euclidienne d'un vecteur.
+method void Vector::normalize (); Modifie le vecteur donné en argument de manière à ce que sa norme soit égale à 1.

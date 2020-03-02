@@ -1,0 +1,2 @@
+class IsoHardPower;
+method void IsoHardPower::setParameter(Indice,Real);Méthode permettant de spécifier la valeur du paramètre $P_i$ dans la forme de loi $\sigma^{v}=P_{1}\left(P_{2}\sigma^{v} + P_{3}\overline{\varepsilon}^{vp}\right)^{P_4}$ pour un matériau.

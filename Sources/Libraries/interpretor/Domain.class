@@ -1,0 +1,4 @@
+class Domain;
+name Domain::name;
+method Node* Domain::getNodeByNumber(Indice);Cette méthode renvoie un pointeur sur un noeud après avoir effectué une recherche de ce noeud dans la grille courante en fonction du numéro correspondant du noeud.
+method void Domain::addInterface(Interface*);Cette méthode ajoute une interface de contact à un domaine de la structure.

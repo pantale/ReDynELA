@@ -1,0 +1,8 @@
+virtual class Function;
+name Function::name;
+attribute String Function::name;Nom de la fonction défini au niveau des variables de DynELA.
+method String Function::getName();Retourne le nom de la fonction.
+method Real Function::getSlope(Real);Calcul de la pente  (la dérivée) d'une fonction en un point donné (par son abscisse).
+method Real Function::getValue(Real);Calcul de l'ordonnée d'un point quelconque en fonction de l'abscisse.
+method void Function::setName(String);Permet de définir le nom de la fonction.
+method void Function::print();Affiche le contenu de la fonction à l'écran.

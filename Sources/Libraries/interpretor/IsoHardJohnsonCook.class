@@ -1,0 +1,2 @@
+class IsoHardJohnsonCook;
+method void IsoHardJohnsonCook::defineLaw(Real,Real,Real,Real,Real,Real,Real,Real);

@@ -1,0 +1,4 @@
+class BoundaryRestrain;
+method Vec3D BoundaryRestrain::get(); Cette méthode permet de récupérer le vecteur déplacement imposé sous forme d'un Vec3D.
+method void BoundaryRestrain::set(Vec3D); Cette méthode permet de spécifier le vecteur de déplacement associé à la condition limite sous la forme d'un Vec3D.
+method void BoundaryRestrain::set(Real,Real,Real); Cette méthode permet de spécifier le vecteur de déplacement associé à la condition limite sous la forme d'un triplet de réels.

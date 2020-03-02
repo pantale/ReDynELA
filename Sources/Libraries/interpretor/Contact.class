@@ -1,0 +1,4 @@
+virtual class ContactLaw;
+class CoulombLaw;
+heritance CoulombLaw : ContactLaw;
+method void CoulombLaw::setFriction(Real); Affecte la valeur du coefficient de frottement pour une loi de frottement de type Coulomb.
