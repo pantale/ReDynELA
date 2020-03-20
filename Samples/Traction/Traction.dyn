@@ -27,7 +27,7 @@
 
 
 Real totalTime=1.1E-04;
-Real saves=20;
+Real saves=25;
 
 // Target
 Real A_t=360E6;
@@ -3233,7 +3233,7 @@ materiauProjectile.setDensity(rho_p);
 materiauProjectile.setColor(0.0000000E+00, 1.0000000E+00, 1.0000000E+00);
 hardmateriauProjectile.setFunction(hardening_p);
 struct.attachMaterialToElements(materiauProjectile,projEls);
-materiauProjectile.setHardening(hardmateriauProjectile);
+//materiauProjectile.setHardening(hardmateriauProjectile);
 
 /*
   Boundary Displacement conditions
