@@ -56,7 +56,20 @@ The balancing of the elements in files : proc_*
 All results are available, but unfortunately all those results are in binary *.bin files, and you will need the post processor to see it. A compiled version of it is in directory PostProcessor, you can use it, but this requires to have the same libraries as mime. I'm on an Ubuntu 18.04.4 LTS version.
 
 	../../PostProcessor/DynELA_post sample_name_without_extension
-	
+
+## Installation via the Guix package manager
+
+Users of the [Guix](https://guix.gnu.org/) package manager can install the software into their user profile using
+
+    guix package -f guix.scm
+
+This will put the executable `DynELA_solve` onto the shell's search path. See the Guix manual for other ways to use the package definition in `guix.scm`.
+
+Installation was tested with commit `e64ea84392ca85d1ef23ebc5e4c1ec759f29b8cd` of Guix. Should it fail with a different version, use
+
+    guix time-machine --commit=e64ea84392ca85d1ef23ebc5e4c1ec759f29b8cd -- package -f guix.scm
+
+
 ***
 Olivier Pantalé  
 Full Professor of Mechanics  
