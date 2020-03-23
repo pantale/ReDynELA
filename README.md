@@ -19,9 +19,9 @@ Genaration of Makefiles for DynELA compilation is based on the use of the CMake 
 
 DynELA is written in C++ therefore it needs a C++ compiler and some libraries. Under Ubuntu this can be installed with the following command:
 
-	sudo apt install bison
+	sudo apt install bison flex-old
 
-This sould also install the flex interpreter.
+This sould also install the bison parser and the flex interpreter, (DynELA requires the old-flex interpreter 2.5.4, called flex-old).
 
 ### Download and compilation procedure:
 
