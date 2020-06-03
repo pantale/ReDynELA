@@ -1,9 +1,16 @@
 /***************************************************************************
  *                                                                         *
- *  DynELA Finite Element Code v 3.0                                       *
- *  By Olivier PANTALE                                                     *
+ *  DynELA Project                                                         *
  *                                                                         *
- *  (c) Copyright 1997-2016                                                *
+ *  (c) Copyright 1997-2006                                                *
+ *                                                                         *
+ *      Equipe C.M.A.O                                                     *
+ *      Laboratoire Genie de production                                    *
+ *      Ecole Nationale d'Ingenieurs de Tarbes                             *
+ *      BP 1629 - 65016 TARBES cedex                                       *
+ *                                                                         *
+ *                                                                         *
+ *  Main Author: Olivier PANTALE                                           *
  *                                                                         *
  **************************************************************************/
 

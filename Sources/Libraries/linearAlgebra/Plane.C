@@ -12,20 +12,6 @@
  *                                                                         *
  *  Main Author: Olivier PANTALE                                           *
  *                                                                         *
- *   This program is free software; you can redistribute it and/or modify  *
- *   it under the terms of the GNU General Public License as published by  *
- *   the Free Software Foundation; either version 2 of the License, or     *
- *   (at your option) any later version.                                   *
- *                                                                         *
- *   This program is distributed in the hope that it will be useful,       *
- *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
- *   GNU General Public License for more details.                          *
- *                                                                         *
- *   You should have received a copy of the GNU General Public License     *
- *   along with this program; if not, write to the                         *
- *   Free Software Foundation, Inc.,                                       *
- *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  **************************************************************************/
 
 // begin date : 
@@ -37,10 +23,10 @@
 
 /*!
   \file Plane.C
-  \brief fichier .C de définition et de manipulation de plans 3D
+  \brief fichier .C de dï¿½finition et de manipulation de plans 3D
   \ingroup linearAlgebra
 
-  Ce fichier définit les méthodes permettant de gérer des plans dans une espace cartésien à 3 dimensions. Ces méthodes sont trèss simple, et cette classe n'est pas tres complète.
+  Ce fichier dï¿½finit les mï¿½thodes permettant de gï¿½rer des plans dans une espace cartï¿½sien ï¿½ 3 dimensions. Ces mï¿½thodes sont trï¿½ss simple, et cette classe n'est pas tres complï¿½te.
 
   \author Olivier PANTALE
   \since DynELA 0.9.5
@@ -50,9 +36,9 @@
 
 #include <Plane.h>
 
-//!constructeur par défaut de la classe Plane
+//!constructeur par dï¿½faut de la classe Plane
 /*!
-  Ce constructeur alloue la mémoire pour un plan
+  Ce constructeur alloue la mï¿½moire pour un plan
   \author &copy; Olivier PANTALE
   \since 0.9.5
 */
@@ -77,9 +63,9 @@ Plane::~Plane ()
 {
 }
 
-//!définit un plan
+//!dï¿½finit un plan
 /*!
-  Cette méthode permet de définir un plan passant par trois points de l'espace. Le plan ainsi construit est tel que la normale unitaire extérieure est définie par le produit vectoriel des vecteurs
+  Cette mï¿½thode permet de dï¿½finir un plan passant par trois points de l'espace. Le plan ainsi construit est tel que la normale unitaire extï¿½rieure est dï¿½finie par le produit vectoriel des vecteurs
 
   \f[
   \left\{ \begin{array}{l}
@@ -88,14 +74,14 @@ Plane::~Plane ()
   \end{array}\right. 
   \f]
 
-  et la normale extérieure est définie par
+  et la normale extï¿½rieure est dï¿½finie par
 
   \f[
   \overrightarrow{n}=\overrightarrow{v_{1}}\overrightarrow{\wedge v_{1}}
   \f]
   \param p1 le premier point
-  \param p2 le deuxième point
-  \param p3 le troisième point
+  \param p2 le deuxiï¿½me point
+  \param p3 le troisiï¿½me point
   \author &copy; Olivier PANTALE
   \since 0.9.5
 */
@@ -125,7 +111,7 @@ Plane::set (Vec3D p1, Vec3D p2, Vec3D p3)
 
 //!inverse la normale du plan
 /*!
-  Cette méthode inverse le sens de la normale définissant le plan.
+  Cette mï¿½thode inverse le sens de la normale dï¿½finissant le plan.
   \author &copy; Olivier PANTALE
   \since 0.9.5
 */
@@ -142,7 +128,7 @@ Plane::inverse ()
 
 //!translate le plan suivant un vecteur
 /*!
-  Cette méthode translate le plan suivant un vecteur défini en argument
+  Cette mï¿½thode translate le plan suivant un vecteur dï¿½fini en argument
   \param vect vecteur de translation
   \author &copy; Olivier PANTALE
   \since 0.9.5

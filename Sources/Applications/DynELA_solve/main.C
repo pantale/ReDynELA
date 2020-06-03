@@ -12,20 +12,6 @@
  *                                                                         *
  *  Main Author: Olivier PANTALE                                           *
  *                                                                         *
- *   This program is free software; you can redistribute it and/or modify  *
- *   it under the terms of the GNU General Public License as published by  *
- *   the Free Software Foundation; either version 2 of the License, or     *
- *   (at your option) any later version.                                   *
- *                                                                         *
- *   This program is distributed in the hope that it will be useful,       *
- *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
- *   GNU General Public License for more details.                          *
- *                                                                         *
- *   You should have received a copy of the GNU General Public License     *
- *   along with this program; if not, write to the                         *
- *   Free Software Foundation, Inc.,                                       *
- *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  **************************************************************************/
 
 // begin date : 
@@ -54,9 +40,9 @@ void syntaxePrint()
   cout << "DynELA [options] file\n\n";
   cout << "options disponibles:\n";
   cout << "    -help        affichage de cet ecran d'aide\n";
-  cout << "    -restart <n> permet de continuer un calcul interrompu en spécifiant un numéro de sauvegarde\n"
+  cout << "    -restart <n> permet de continuer un calcul interrompu en spï¿½cifiant un numï¿½ro de sauvegarde\n"
           "                 exemple: DynELA run -restart 20 Test (relance Test depuis la sauvegarde 20)\n";
-//  cout << "    -times       affichage des temps d'exécution des fonctions principales\n";
+//  cout << "    -times       affichage des temps d'exï¿½cution des fonctions principales\n";
 //  cout << "    -no_history  desactive l'ecriture du fichier de time history\n";
 }
 
@@ -64,7 +50,7 @@ void syntaxePrint()
 int main(int argc, char **argv)
 //-----------------------------------------------------------------------------
 {
-  // réglage interne
+  // rï¿½glage interne
 //  Boolean displayExecutionTimesFlag=False;
 
   // affichage du message de presentation
@@ -84,16 +70,16 @@ int main(int argc, char **argv)
     exit(-1);
   }
 
-  // recuperation du nom de l'exécutable
+  // recuperation du nom de l'exï¿½cutable
   String filename=argv[argc-1];
 
-  // créer une instance du fichier d'entrée
+  // crï¿½er une instance du fichier d'entrï¿½e
   inputDyn = new InputDyn;
 
-  // nom du fichier de données
+  // nom du fichier de donnï¿½es
 //  String dyn_name=filename+sourceFileExtension;
 
-  // lire le fichier de données
+  // lire le fichier de donnï¿½es
   parsedFileName=filename+sourceFileExtension;
   parseInputDyn (InputDyn::Solve);
 //  Global_Structure->logFile->setVerbosity(2);
@@ -118,14 +104,14 @@ int main(int argc, char **argv)
   Global_Structure->resultFile->incrementalFile()=True;
 
   // restart analyse
-  // nouveauté de la version 0.9.5
+  // nouveautï¿½ de la version 0.9.5
   if (ArgumentsLineParse("restart",argc,argv)==True) {
     String tmpStr=ArgumentsLineGet("restart",argc,argv);
     Indice restartInc;
     sscanf(tmpStr.chars(),"%ld",&restartInc);
     cout << "Restarting from previous save number "<<restartInc<<endl;
 
-    // transfert des données
+    // transfert des donnï¿½es
     Global_Structure->resultFile->startCurrentSave(restartInc);
     Global_Structure->resultFile->setMode(Read);
     Global_Structure->resultFile->transfert();
@@ -145,7 +131,7 @@ int main(int argc, char **argv)
     Global_Structure->nextSaveTime=(restartInc+1)*Global_Structure->saveTime;
   }  
 
-  // lancement du solveur général
+  // lancement du solveur gï¿½nï¿½ral
   Global_Structure->solve();
 
   Global_Structure->resultFile->transfert();
@@ -192,14 +178,14 @@ int main(int argc, char **argv)
   pdomain->io_result->incrementalFile()=True;
   
   // restart analyse
-  // nouveauté de la version 0.9.5
+  // nouveautï¿½ de la version 0.9.5
   if (ArgumentsLineParse("restart",argc,argv)==True) {
     String tmpStr=ArgumentsLineGet("restart",argc,argv);
     Indice restartInc;
     sscanf(tmpStr.chars(),"%ld",&restartInc);
     cout << "Restarting from previous save number "<<restartInc<<endl;
 
-    // transfert des données
+    // transfert des donnï¿½es
     pdomain->io_result->startCurrentSave(restartInc);
     pdomain->io_result->setMode(Read);
     pdomain->io_result->transfert();
